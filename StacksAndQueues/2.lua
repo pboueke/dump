@@ -38,7 +38,6 @@ function Stack:Create()
         return table.unpack(entries)
     end
 
-    -- TODO: I forgot this must be 0(1)
     function t:min() 
         return self._min
     end
