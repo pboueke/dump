@@ -12,8 +12,6 @@ let rec recur data =
         Leaf H
     | [H;T] ->
         Node ([(H, [recur([T]); Leaf -1])] |> Map.ofSeq)
-    | [H;M;T] ->
-        Node ([(M, [recur([H]); recur([T])])] |> Map.ofSeq)
     | _ -> 
         let half = data.Length/2
         let H = data.[0..(half-1)]
