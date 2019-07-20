@@ -7,7 +7,7 @@ type Tree =
 
 let rec treeToString tree (level: int) =
     match tree with
-    | Empty -> ""
+    | Null -> ""
     | Leaf i ->
         String.Format("{0} Leaf {1}", String.replicate level " | ", i)
     | Node (i,l) ->

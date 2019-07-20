@@ -6,7 +6,6 @@ class LinkedListNode<T>(value: T){
 class TreeNode<T>(value: T){
     var value:T = value
     var left:TreeNode<T>? = null
-    
     var right:TreeNode<T>? = null
 }
 
