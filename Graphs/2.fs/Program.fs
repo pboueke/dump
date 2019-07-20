@@ -22,7 +22,9 @@ let rec makeTree data =
     | [H] ->
         Leaf H
     | [H;T] ->
-        Node (H, [makeTree([T]); Null])
+        match H > T with
+        | true -> Node (H, [makeTree([T]); Null])
+        | false -> Node (H, [Null; makeTree([T])])
     | _ -> 
         let half = data.Length/2
         let H = data.[0..(half-1)]

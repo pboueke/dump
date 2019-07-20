@@ -12,7 +12,8 @@ let balancedTree = Node (1,
                             [Leaf 5])
                          Leaf 6])
                     ;Node (7,
-                        [Leaf 8; Node (9,
+                        [Leaf 8; 
+                        Node (9,
                             [Leaf 10; 
                             Leaf 11])])]);
                 Node (12,
@@ -27,7 +28,6 @@ let imbalancedTree = Node (1,
                                 [Leaf 4])]);
                         Leaf 1])                        
                                                                                                             
-
 let rec depth tree = 
     match tree with
     | Null -> 0
