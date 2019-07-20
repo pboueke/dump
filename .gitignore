@@ -610,3 +610,5 @@ build-iPhoneSimulator/
 .rvmrc
 
 # End of https://www.gitignore.io/api/lua,ruby,python,csharp,clojure,haskell
+
+*.kexe
