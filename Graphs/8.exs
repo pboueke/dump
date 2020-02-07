@@ -1,4 +1,4 @@
-defmodule Vertix do
+defmodule Vertex do
 
     defstruct children: [], parent: nil
 
@@ -6,7 +6,7 @@ end
 
 defmodule CommonAncestor do
 
-    # gets the depth of a vertix in the tree
+    # gets the depth of a Vertex in the tree
     def get_depth(tree, v) do
         case tree[v].parent do
             nil -> 1
@@ -53,13 +53,13 @@ defmodule Main do
 
     def main do
         tree = %{
-            :a => %Vertix{children: [:b, :c, :d]},
-            :b => %Vertix{children: [:e, :f], parent: :a},
-            :c => %Vertix{parent: :a},
-            :d => %Vertix{parent: :a},
-            :e => %Vertix{children: [:g], parent: :b},
-            :f => %Vertix{parent: :b},
-            :g => %Vertix{parent: :e}
+            :a => %Vertex{children: [:b, :c, :d]},
+            :b => %Vertex{children: [:e, :f], parent: :a},
+            :c => %Vertex{parent: :a},
+            :d => %Vertex{parent: :a},
+            :e => %Vertex{children: [:g], parent: :b},
+            :f => %Vertex{parent: :b},
+            :g => %Vertex{parent: :e}
         }
 
         IO.puts CommonAncestor.get_ca(tree, :b, :e)
