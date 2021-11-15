@@ -1,0 +1,3 @@
+Language, Paradigm, Release
+Ruby, OO, 2004
+Clojure, Functional, 2007
